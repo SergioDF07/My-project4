@@ -1,14 +1,14 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 281,
+    "build": 279,
     "major": 5,
     "minor": 6,
     "revision": 0
   },
   "initialGDVersion": "5.6.281",
   "properties": {
-    "adaptGameResolutionAtRuntime": true,
+    "adaptGameResolutionAtRuntime": false,
     "antialiasingMode": "MSAA",
     "antialisingEnabledOnMobile": false,
     "folderProject": false,
@@ -17,7 +17,7 @@
     "pixelsRounding": false,
     "projectUuid": "5576fd07-e455-45e3-bb0b-4c63894d6198",
     "scaleMode": "linear",
-    "sizeOnStartupMode": "adaptWidth",
+    "sizeOnStartupMode": "",
     "templateSlug": "",
     "version": "1.0.0",
     "name": "breakout",
@@ -29,7 +29,35 @@
     "maxFPS": 60,
     "minFPS": 20,
     "verticalSync": false,
-    "platformSpecificAssets": {},
+    "platformSpecificAssets": {
+      "android-icon-144": "",
+      "android-icon-192": "",
+      "android-icon-36": "",
+      "android-icon-48": "",
+      "android-icon-72": "",
+      "android-icon-96": "",
+      "android-windowSplashScreenAnimatedIcon": "",
+      "desktop-icon-512": "",
+      "ios-icon-100": "",
+      "ios-icon-1024": "",
+      "ios-icon-114": "",
+      "ios-icon-120": "",
+      "ios-icon-144": "",
+      "ios-icon-152": "",
+      "ios-icon-167": "",
+      "ios-icon-180": "",
+      "ios-icon-20": "",
+      "ios-icon-29": "",
+      "ios-icon-40": "",
+      "ios-icon-50": "",
+      "ios-icon-57": "",
+      "ios-icon-58": "",
+      "ios-icon-60": "",
+      "ios-icon-72": "",
+      "ios-icon-76": "",
+      "ios-icon-80": "",
+      "ios-icon-87": ""
+    },
     "loadingScreen": {
       "backgroundColor": 0,
       "backgroundFadeInDuration": 0.2,
@@ -143,6 +171,17 @@
         "name": "NewSprite10",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "assets/Kenney Rocket.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "a7525df1cce09eecd517873e6ebe7294b7789f189d624770913570e40b1c6c92_Kenney Rocket.ttf",
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Kenney Font Pack/a7525df1cce09eecd517873e6ebe7294b7789f189d624770913570e40b1c6c92_Kenney Rocket.ttf",
+          "name": "gdevelop-asset-store"
+        }
       }
     ]
   },
@@ -151,18 +190,30 @@
     "folderName": "__ROOT"
   },
   "objectsGroups": [],
-  "variables": [],
+  "variables": [
+    {
+      "name": "Var_puntos",
+      "persistentUuid": "9d62d6d3-b8e2-4ddb-bad7-36d882b6eadd",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "Var_bolas",
+      "type": "number",
+      "value": 3
+    }
+  ],
   "layouts": [
     {
-      "b": 73,
+      "b": 0,
       "disableInputWhenNotFocused": true,
       "mangledName": "Escena_32sin_32t_237tulo",
       "name": "Escena sin título",
-      "r": 74,
+      "r": 0,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
       "title": "",
-      "v": 74,
+      "v": 0,
       "uiSettings": {
         "grid": false,
         "gridType": "rectangular",
@@ -321,7 +372,7 @@
           "name": "Sp_sapo",
           "persistentUuid": "1aec56da-4220-4586-b3fe-05bbe628fc86",
           "width": 64,
-          "x": 1282,
+          "x": 1280,
           "y": 0,
           "zOrder": 6,
           "numberProperties": [],
@@ -361,6 +412,54 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Te_puntos",
+          "persistentUuid": "5af181c6-8123-4c11-8d82-3bc004807043",
+          "width": 0,
+          "x": 32,
+          "y": 0,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Te_bolas",
+          "persistentUuid": "4ed3f6fd-9743-446a-9236-6ae49d477157",
+          "width": 0,
+          "x": 513,
+          "y": 0,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Te_nivel",
+          "persistentUuid": "86572783-76e4-4319-ba73-44714be7638c",
+          "width": 0,
+          "x": 887,
+          "y": 0,
+          "zOrder": 11,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -371,7 +470,14 @@
           "persistentUuid": "52cd69af-93ce-472c-96fe-0b0e8eff6599",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "Var_localpuntos",
+              "persistentUuid": "3e71549c-a57a-4650-a275-9131fd60ebb6",
+              "type": "number",
+              "value": 30
+            }
+          ],
           "effects": [],
           "behaviors": [],
           "animations": [
@@ -433,7 +539,14 @@
           "persistentUuid": "05698bc9-9a45-49fd-ac25-ef8e5fb1625f",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "Var_localpuntos",
+              "persistentUuid": "c49c401b-e8cc-46b8-9b83-a6db92f471ea",
+              "type": "number",
+              "value": 10
+            }
+          ],
           "effects": [],
           "behaviors": [],
           "animations": [
@@ -495,7 +608,14 @@
           "persistentUuid": "5cdd8fcd-dbc0-4aed-8b9e-c0f3305348de",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "Var_localpuntos",
+              "persistentUuid": "32d327d8-2d17-43fe-b154-f502516b4f16",
+              "type": "number",
+              "value": 50
+            }
+          ],
           "effects": [],
           "behaviors": [],
           "animations": [
@@ -557,7 +677,14 @@
           "persistentUuid": "e9167525-c3ba-4eaf-b3d1-8365ee55426c",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "Var_localpuntos",
+              "persistentUuid": "f9a4a3ed-f31b-401c-9253-04eca9d25c85",
+              "type": "number",
+              "value": 40
+            }
+          ],
           "effects": [],
           "behaviors": [],
           "animations": [
@@ -619,7 +746,14 @@
           "persistentUuid": "6d2c0c68-73d7-4c2f-8e48-894b8826f37b",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "Var_localpuntos",
+              "persistentUuid": "ccec2945-ddef-4d32-89a3-eb94a34f89b5",
+              "type": "number",
+              "value": 20
+            }
+          ],
           "effects": [],
           "behaviors": [],
           "animations": [
@@ -1180,6 +1314,182 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "Te_puntos",
+          "persistentUuid": "18abfb57-671a-4e53-bd2c-c26732ea0dce",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Puntos : 0",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 40,
+          "color": {
+            "b": 28,
+            "g": 231,
+            "r": 248
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Puntos : 0",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 40,
+            "lineHeight": 0,
+            "color": "248;231;28"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "Te_bolas",
+          "persistentUuid": "0c8a4591-3819-41b6-afe3-a6e8a08ab7ce",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Bolas: 3",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 40,
+          "color": {
+            "b": 28,
+            "g": 231,
+            "r": 248
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Bolas: 3",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 40,
+            "lineHeight": 0,
+            "color": "248;231;28"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "Te_nivel",
+          "persistentUuid": "359872c8-1f5e-4154-bc82-6607ae57b0ef",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Nivel: 1",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 40,
+          "color": {
+            "b": 28,
+            "g": 231,
+            "r": 248
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Nivel: 1",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 40,
+            "lineHeight": 0,
+            "color": "248;231;28"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "Te_gameover",
+          "persistentUuid": "85aa5c92-ebde-4ef9-a9f9-b2ff02af1d70",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Game Over",
+          "font": "a7525df1cce09eecd517873e6ebe7294b7789f189d624770913570e40b1c6c92_Kenney Rocket.ttf",
+          "textAlignment": "left",
+          "characterSize": 80,
+          "color": {
+            "b": 27,
+            "g": 2,
+            "r": 208
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Game Over",
+            "font": "a7525df1cce09eecd517873e6ebe7294b7789f189d624770913570e40b1c6c92_Kenney Rocket.ttf",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 80,
+            "lineHeight": 0,
+            "color": "208;2;27"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -1204,6 +1514,9 @@
             "objectName": "Sp_pelota"
           },
           {
+            "objectName": "Te_gameover"
+          },
+          {
             "objectName": "Sp_P1"
           },
           {
@@ -1220,6 +1533,15 @@
           },
           {
             "objectName": "Sp_sapo"
+          },
+          {
+            "objectName": "Te_puntos"
+          },
+          {
+            "objectName": "Te_nivel"
+          },
+          {
+            "objectName": "Te_bolas"
           }
         ]
       },
@@ -1382,41 +1704,67 @@
                 "",
                 "\"Space\""
               ]
-            },
-            {
-              "type": {
-                "value": "SceneInstancesCount"
-              },
-              "parameters": [
-                "",
-                "Sp_pelota",
-                "<",
-                "1"
-              ]
             }
           ],
-          "actions": [
+          "actions": [],
+          "events": [
             {
-              "type": {
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "Sp_pelota",
-                "640",
-                "640",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "AddForceAL"
-              },
-              "parameters": [
-                "Sp_pelota",
-                "RandomFloatInRange(220, 330)",
-                "300",
-                "1"
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "Var_bolas",
+                    ">",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SceneInstancesCount"
+                      },
+                      "parameters": [
+                        "",
+                        "Sp_pelota",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "Sp_pelota",
+                        "640",
+                        "640",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AddForceAL"
+                      },
+                      "parameters": [
+                        "Sp_pelota",
+                        "RandomFloatInRange(220, 330)",
+                        "300",
+                        "1"
+                      ]
+                    }
+                  ]
+                }
               ]
             }
           ]
@@ -1456,6 +1804,27 @@
               "parameters": [
                 "Gru_ladrillos",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Var_puntos",
+                "+",
+                "Gru_ladrillos.Var_localpuntos"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Te_puntos",
+                "Text",
+                "=",
+                "\"Puntos: \"+ Var_puntos"
               ]
             }
           ]
@@ -1517,6 +1886,96 @@
                 "Bounce",
                 "Sp_sapo",
                 ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosY"
+              },
+              "parameters": [
+                "Sp_pelota",
+                ">=",
+                "720"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Sp_pelota",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Var_bolas",
+                "-",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Te_bolas",
+                "Text",
+                "=",
+                "\"Bolas: \" + Var_bolas"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "Var_bolas",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Te_gameover",
+                    "0",
+                    "0",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "Te_gameover",
+                    "=",
+                    "380",
+                    "=",
+                    "280"
+                  ]
+                }
               ]
             }
           ]
@@ -1617,6 +2076,10 @@
         {
           "name": "Scale",
           "type": "ScalableCapability::ScalableBehavior"
+        },
+        {
+          "name": "Text",
+          "type": "TextContainerCapability::TextContainerBehavior"
         }
       ]
     }
